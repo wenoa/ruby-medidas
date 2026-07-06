@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    name: "🧪 Probar medidas"
+    name: "🧪 Probar"
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v6

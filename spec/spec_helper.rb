@@ -1,7 +1,11 @@
 require "simplecov"
 require "simplecov-console"
 
-SimpleCov.start if ENV["COVERAGE"]
+if ENV["COVERAGE"]
+  SimpleCov.start {
+    enable_coverage(:branch)
+  }
+end
 
 require_relative "../lib/medidas"
 require_relative "../lib/medidas/mongoid"

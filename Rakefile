@@ -13,7 +13,8 @@ task(:format) { sh "rubocop -A" }
 
 task(:check_coverage) {
   SimpleCov.collate(Dir["coverage/.resultset.json"]) {
-    minimum_coverage 100
+    enable_coverage(:branch)
+    minimum_coverage(line: 100, branch: 100)
     formatter SimpleCov::Formatter::MultiFormatter.new([
       SimpleCov::Formatter::HTMLFormatter,
       SimpleCov::Formatter::Console,

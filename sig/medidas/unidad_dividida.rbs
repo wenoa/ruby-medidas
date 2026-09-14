@@ -1,0 +1,19 @@
+module Medidas
+  class UnidadDividida < Unidad
+    @nominador: Unidad
+    @denominador: Unidad
+
+    def self.a_partir_de: (Unidad nominador, Unidad denominador) -> UnidadDividida
+
+    def initialize: (String nombre, String simbolo, Unidad nominador, Unidad denominador) -> void
+
+    # A diferencia de `UnidadSimple`, no sabe multiplicarse por otra unidad.
+    def *: (cantidad cantidad) -> Medida
+
+    def unidad_base: () -> UnidadDividida
+
+    # `protected` en la implementación; RBS no representa esa visibilidad.
+    attr_reader nominador: Unidad
+    attr_reader denominador: Unidad
+  end
+end

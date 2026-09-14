@@ -1,0 +1,38 @@
+module Medidas
+  class Unidad
+    @@instances: Array[Unidad]
+
+    @nombre: String
+    @simbolo: String
+
+    def self.simbolizada_como: (String simbolo) -> Unidad?
+
+    attr_reader nombre: String
+    attr_reader simbolo: String
+
+    def initialize: (String nombre, String simbolo) -> void
+
+    def simbolizada_como?: (String simbolo) -> bool
+
+    def misma_magnitud?: (Unidad otra) -> bool
+
+    def exportar: () -> { nombre: String, simbolo: String }
+
+    def coerce: (cantidad otro) -> [Unidad, cantidad]
+
+    # Protocolo que toda unidad responde, implementado por las subclases.
+
+    def unidad_base: () -> Unidad
+
+    def convertir_cantidad_a_unidad_base: (BigDecimal cantidad) -> BigDecimal
+
+    def convertir_cantidad_desde_unidad_base: (BigDecimal cantidad) -> BigDecimal
+
+    def *: (Unidad cantidad_o_unidad) -> Unidad
+      | (cantidad cantidad_o_unidad) -> Medida
+
+    def /: (Unidad otra) -> UnidadDividida
+
+    def multiplicar_por_unidad_simple: (UnidadSimple una_unidad_simple) -> Unidad
+  end
+end

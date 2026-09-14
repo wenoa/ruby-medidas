@@ -11,7 +11,7 @@ module Medidas
       end
 
       def demongoize(medida)
-        medida[:cantidad] * Unidad.simbolizada_como(medida[:unidad])
+        medida[:cantidad] * Unidad.simbolizada_como(medida[:unidad]) # steep:ignore UnresolvedOverloading
       end
 
       def evolve(object)

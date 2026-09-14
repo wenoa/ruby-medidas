@@ -1,0 +1,51 @@
+module Medidas
+  class Medida
+    MAGNITUDES_DISTINTAS: String
+
+    @cantidad: BigDecimal
+    @unidad: Unidad
+
+    def initialize: (cantidad cantidad, Unidad unidad) -> void
+
+    def ==: (Object otra) -> bool
+
+    def <=: (Medida otro) -> bool
+
+    def >=: (Medida otro) -> bool
+
+    def >: (Medida | BigDecimal otro) -> bool
+
+    def <: (Medida | BigDecimal otro) -> bool
+
+    def <=>: (Medida otra) -> Integer?
+
+    def +: (Medida otra) -> Medida
+
+    def -: (Medida otra) -> Medida
+
+    def *: (cantidad | Medida otra) -> Medida
+
+    def between?: (Medida a, Medida b) -> bool
+
+    def infinity?: () -> bool
+
+    def proyectar: (cantidad cantidad) -> Medida
+
+    def desproyectar: () -> Float
+
+    def to_s: () -> String
+
+    def zero?: () -> bool
+
+    def positive?: () -> bool
+
+    def exportar: () -> { cantidad: Float, unidad: { nombre: String, simbolo: String } }
+
+    # `protected` en la implementación; RBS no representa esa visibilidad.
+
+    def en_unidad_base: () -> Medida
+
+    attr_reader cantidad: BigDecimal
+    attr_reader unidad: Unidad
+  end
+end

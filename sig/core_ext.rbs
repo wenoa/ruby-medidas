@@ -1,0 +1,14 @@
+class Integer
+  def *: (Medidas::Unidad unidad) -> Medidas::Medida
+    | ...
+end
+
+class Float
+  def *: (Medidas::Unidad unidad) -> Medidas::Medida
+    | ...
+end
+
+class BigDecimal
+  def *: (Medidas::Unidad unidad) -> Medidas::Medida
+    | ...
+end

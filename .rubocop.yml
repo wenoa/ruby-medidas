@@ -24,6 +24,9 @@ Layout/LineLength:
 Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 
+Layout/LeadingCommentSpace:
+  AllowRBSInlineAnnotation: true
+
 Style/Documentation:
   Enabled: false
 

@@ -1,0 +1,4 @@
+module Medidas
+  class UnidadSimple < Unidad
+  end
+end

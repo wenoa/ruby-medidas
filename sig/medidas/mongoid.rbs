@@ -1,0 +1,15 @@
+module Medidas
+  class Medida
+    UNIDAD_DESCONOCIDA: String
+
+    type documento = { cantidad: cantidad, unidad: String }
+
+    def mongoize: () -> documento
+
+    def self.mongoize: (Medida medida) -> documento
+
+    def self.demongoize: (documento medida) -> Medida
+
+    def self.evolve: (Object object) -> (documento | Object)
+  end
+end

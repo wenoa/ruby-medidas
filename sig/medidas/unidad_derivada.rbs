@@ -1,0 +1,10 @@
+module Medidas
+  class UnidadDerivada < UnidadSimple
+    @factor: BigDecimal
+    @unidad_base: UnidadBase
+
+    def initialize: (String nombre, String simbolo, UnidadBase unidad_base, cantidad factor) -> void
+
+    attr_reader unidad_base: UnidadBase
+  end
+end

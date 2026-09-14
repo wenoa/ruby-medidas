@@ -1,0 +1,3 @@
+module Medidas
+  VERSION: String
+end

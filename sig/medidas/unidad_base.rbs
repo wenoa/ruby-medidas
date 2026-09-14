@@ -1,0 +1,7 @@
+module Medidas
+  class UnidadBase < UnidadSimple
+    def derivar: (String nombre, String simbolo, cantidad factor) -> UnidadDerivada
+
+    def unidad_base: () -> self
+  end
+end

@@ -1,6 +1,6 @@
 module Medidas
   class Unidad
-    @@instances = []
+    @@instances = [] # steep:ignore UnannotatedEmptyCollection
 
     def self.simbolizada_como(simbolo)
       @@instances.detect { |unidad| unidad.simbolizada_como? simbolo }

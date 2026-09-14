@@ -1,0 +1,6 @@
+module Medidas
+  # `Rational` queda afuera: funciona en tiempo de ejecución, pero las firmas de
+  # `bigdecimal` declaran `Rational#to_d` con la precisión obligatoria y no se
+  # las puede corregir desde acá sin duplicar la definición.
+  type cantidad = Integer | Float | BigDecimal
+end

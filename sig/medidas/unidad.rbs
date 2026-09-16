@@ -20,6 +20,8 @@ module Medidas
 
     def coerce: (cantidad otro) -> [Unidad, cantidad]
 
+    def adapt_to_range: (Range[cantidad] rango) -> Range[Medida]
+
     # Protocolo que toda unidad responde, implementado por las subclases.
 
     def unidad_base: () -> Unidad

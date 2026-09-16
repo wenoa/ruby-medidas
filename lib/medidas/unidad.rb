@@ -32,5 +32,10 @@ module Medidas
     def coerce(otro)
       [self, otro]
     end
+
+    # Se implementa para ser compatible con `Range#*` de la gema extensions.
+    def adapt_to_range(rango)
+      Range.new(rango.begin * self, rango.end * self, rango.exclude_end?)
+    end
   end
 end

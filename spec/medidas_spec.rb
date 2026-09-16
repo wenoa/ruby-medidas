@@ -125,4 +125,14 @@ RSpec.describe("Medidas") {
       expect((12 * Milimetro).to_s).to eq("12 mm")
     }
   }
+
+  context("al adaptar un rango a una unidad") {
+    it("se obtiene un rango de medidas") {
+      expect(Milimetro.adapt_to_range(3..5)).to eq((3 * Milimetro)..(5 * Milimetro))
+    }
+
+    it("se preserva la exclusividad del rango") {
+      expect(Milimetro.adapt_to_range(3...5)).to eq((3 * Milimetro)...(5 * Milimetro))
+    }
+  }
 }

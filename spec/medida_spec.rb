@@ -15,8 +15,17 @@ RSpec.describe(Medidas::Medida) {
 
   context("positive?") {
     it("indica si la cantidad es positiva") {
-      expect((1 * Metro).positive?).to be(true)
       expect((-1 * Metro).positive?).to be(false)
+      expect((0 * Metro).positive?).to be(false)
+      expect((1 * Metro).positive?).to be(true)
+    }
+  }
+
+  context("negative?") {
+    it("indica si la cantidad es negativa") {
+      expect((-1 * Metro).negative?).to be(true)
+      expect((0 * Metro).negative?).to be(false)
+      expect((1 * Metro).negative?).to be(false)
     }
   }
 

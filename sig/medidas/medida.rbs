@@ -39,6 +39,8 @@ module Medidas
 
     def positive?: () -> bool
 
+    def negative?: () -> bool
+
     def exportar: () -> { cantidad: Float, unidad: { nombre: String, simbolo: String } }
 
     # `protected` en la implementación; RBS no representa esa visibilidad.

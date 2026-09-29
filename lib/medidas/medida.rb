@@ -86,6 +86,10 @@ module Medidas
       cantidad.positive?
     end
 
+    def negative?
+      cantidad.negative?
+    end
+
     def exportar
       {
         cantidad: cantidad.to_f,
